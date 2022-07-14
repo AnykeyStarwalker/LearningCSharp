@@ -11,13 +11,13 @@ namespace Lesson2
             int counter = 0;
             Sounds.GameStartSound();
         Start_game:
-                        
-            Console.SetCursorPosition(0, 0);
-            Console.WriteLine("Build and go!");
-            Console.WriteLine(counter);
-            
-            
 
+            Console.SetCursorPosition(0, 0);
+            Console.WriteLine($"\tKPeCTuKu - HOJIuKu by AnykeyStarwalker{Environment.NewLine}{Environment.NewLine}" +
+                              $"yIIpaBJIeHue: BbI6op KJIetKu - cTpeJIKu, cdeJIaTb xod - IIpo6eJI, BBod - Ha4aTb 3aHoBo.{Environment.NewLine}");
+
+            GameArea.DrawArea();
+            //Console.WriteLine(counter);
             KeyControls.KeyPress();
             ++counter;
                        
@@ -79,6 +79,79 @@ namespace Lesson2
                     break;
             }
             return key;
+        }
+    }
+    public class GameArea
+    {
+        public static string DrawArea()
+        {
+            string area = "";
+
+            string[,] drawArea = new string[5, 5] { 
+                {"+","-","-","-","+"},
+                {"|"," "," "," ","|"},
+                {"|"," "," "," ","|"},
+                {"|"," "," "," ","|"},
+                {"+","-","-","-","+"} 
+            };
+
+            string s_1, s_2, s_3, s_4, s_5;
+
+            int[,] arrArea = new int[3, 3] { { 0, 1, 1 },{ 2, 0, 2 },{ 1, 2, 0 } };
+            for (int i = 0; i < arrArea.GetLength(0); i++)
+            {
+                s_1 = "\t";
+                s_2 = "\t";
+                s_3 = "\t";
+                s_4 = "\t";
+                s_5 = "\t";
+
+                for (int j = 0; j < arrArea.GetLength(1); j++)
+                {
+                    if(arrArea[i, j] == 0)
+                    {
+                        drawArea[2, 2] = " ";
+                        s_1 += $"{drawArea[0, 0]}{drawArea[0, 1]}{drawArea[0, 2]}{drawArea[0, 3]}{drawArea[0, 4]}";
+                        s_2 += $"{drawArea[1, 0]}{drawArea[1, 1]}{drawArea[1, 2]}{drawArea[1, 3]}{drawArea[1, 4]}";
+                        s_3 += $"{drawArea[2, 0]}{drawArea[2, 1]}{drawArea[2, 2]}{drawArea[2, 3]}{drawArea[2, 4]}";
+                        s_4 += $"{drawArea[3, 0]}{drawArea[3, 1]}{drawArea[3, 2]}{drawArea[3, 3]}{drawArea[3, 4]}";
+                        s_5 += $"{drawArea[4, 0]}{drawArea[4, 1]}{drawArea[4, 2]}{drawArea[4, 3]}{drawArea[4, 4]}";
+                    }
+                    else if(arrArea[i, j] == 1)
+                    {
+                        drawArea[2, 2] = "X";
+                        s_1 += $"{drawArea[0, 0]}{drawArea[0, 1]}{drawArea[0, 2]}{drawArea[0, 3]}{drawArea[0, 4]}";
+                        s_2 += $"{drawArea[1, 0]}{drawArea[1, 1]}{drawArea[1, 2]}{drawArea[1, 3]}{drawArea[1, 4]}";
+                        s_3 += $"{drawArea[2, 0]}{drawArea[2, 1]}{drawArea[2, 2]}{drawArea[2, 3]}{drawArea[2, 4]}";
+                        s_4 += $"{drawArea[3, 0]}{drawArea[3, 1]}{drawArea[3, 2]}{drawArea[3, 3]}{drawArea[3, 4]}";
+                        s_5 += $"{drawArea[4, 0]}{drawArea[4, 1]}{drawArea[4, 2]}{drawArea[4, 3]}{drawArea[4, 4]}";
+
+                    }
+                    else if (arrArea[i, j] == 2)
+                    {
+                        drawArea[2, 2] = "O";
+                        s_1 += $"{drawArea[0, 0]}{drawArea[0, 1]}{drawArea[0, 2]}{drawArea[0, 3]}{drawArea[0, 4]}";
+                        s_2 += $"{drawArea[1, 0]}{drawArea[1, 1]}{drawArea[1, 2]}{drawArea[1, 3]}{drawArea[1, 4]}";
+                        s_3 += $"{drawArea[2, 0]}{drawArea[2, 1]}{drawArea[2, 2]}{drawArea[2, 3]}{drawArea[2, 4]}";
+                        s_4 += $"{drawArea[3, 0]}{drawArea[3, 1]}{drawArea[3, 2]}{drawArea[3, 3]}{drawArea[3, 4]}";
+                        s_5 += $"{drawArea[4, 0]}{drawArea[4, 1]}{drawArea[4, 2]}{drawArea[4, 3]}{drawArea[4, 4]}";
+
+                    }
+
+                    
+                }
+
+                Console.Write($"{s_1}{Environment.NewLine}");
+                Console.Write($"{s_2}{Environment.NewLine}");
+                Console.Write($"{s_3}{Environment.NewLine}");
+                Console.Write($"{s_4}{Environment.NewLine}");
+                Console.Write($"{s_5}{Environment.NewLine}");
+
+
+            }
+
+
+            return area;
         }
     }
 }
