@@ -110,15 +110,19 @@ namespace Lesson2
                 {
                     if(arrArea[i, j] == 0)
                     {
+                        Console.ForegroundColor = ConsoleColor.Green;
                         drawArea[2, 2] = " ";
                         s_1 += $"{drawArea[0, 0]}{drawArea[0, 1]}{drawArea[0, 2]}{drawArea[0, 3]}{drawArea[0, 4]}";
                         s_2 += $"{drawArea[1, 0]}{drawArea[1, 1]}{drawArea[1, 2]}{drawArea[1, 3]}{drawArea[1, 4]}";
                         s_3 += $"{drawArea[2, 0]}{drawArea[2, 1]}{drawArea[2, 2]}{drawArea[2, 3]}{drawArea[2, 4]}";
                         s_4 += $"{drawArea[3, 0]}{drawArea[3, 1]}{drawArea[3, 2]}{drawArea[3, 3]}{drawArea[3, 4]}";
                         s_5 += $"{drawArea[4, 0]}{drawArea[4, 1]}{drawArea[4, 2]}{drawArea[4, 3]}{drawArea[4, 4]}";
+                        Console.ResetColor();
                     }
                     else if(arrArea[i, j] == 1)
                     {
+                        Console.ResetColor();
+                        Console.ForegroundColor = ConsoleColor.Red;
                         drawArea[2, 2] = "X";
                         s_1 += $"{drawArea[0, 0]}{drawArea[0, 1]}{drawArea[0, 2]}{drawArea[0, 3]}{drawArea[0, 4]}";
                         s_2 += $"{drawArea[1, 0]}{drawArea[1, 1]}{drawArea[1, 2]}{drawArea[1, 3]}{drawArea[1, 4]}";
@@ -129,6 +133,8 @@ namespace Lesson2
                     }
                     else if (arrArea[i, j] == 2)
                     {
+                        Console.ResetColor();
+                        Console.ForegroundColor = ConsoleColor.Blue;
                         drawArea[2, 2] = "O";
                         s_1 += $"{drawArea[0, 0]}{drawArea[0, 1]}{drawArea[0, 2]}{drawArea[0, 3]}{drawArea[0, 4]}";
                         s_2 += $"{drawArea[1, 0]}{drawArea[1, 1]}{drawArea[1, 2]}{drawArea[1, 3]}{drawArea[1, 4]}";
