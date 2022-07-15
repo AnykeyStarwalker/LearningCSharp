@@ -12,13 +12,24 @@ namespace Lesson2
             //inicialise
             int[] playerCoord = { 1, 1 };
             int[,] arrArea = new int[3, 3] { { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0, 0 } };
-            int counter = 0;
+            
             Sounds.GameStartSound();
-        Start_game: 
+        Start_game:
+
+            int counter = 0;
+            for (int i = 0; i < arrArea.GetLength(0); i++) {
+                for (int j = 0; j < arrArea.GetLength(1); j++)
+                {
+                    if (arrArea[i, j] == 0) {
+                        ++counter;
+                    }
+                }
+            }
 
             Console.SetCursorPosition(0, 0);
             Console.WriteLine($"\tKPeCTuKu - HOJIuKu by AnykeyStarwalker{Environment.NewLine}{Environment.NewLine}" +
-                              $"yIIpaBJIeHue: BbI6op KJIetKu - cTpeJIKu, cdeJIaTb xod - IIpo6eJI, BBod - Ha4aTb 3aHoBo.{Environment.NewLine}");
+                              $"yIIpaBJIeHue: BbI6op KJIetKu - cTpeJIKu, cdeJIaTb xod - IIpo6eJI, BBod - Ha4aTb 3aHoBo.{Environment.NewLine}" +
+                              $"ocTaJlocb XodoB: {counter}");
 
             GameArea.DrawArea(arrArea, playerCoord);
             ++counter;
@@ -30,7 +41,16 @@ namespace Lesson2
                 }
                 case ("Spacebar"):
                     {
-                        arrArea[playerCoord[0], playerCoord[1]] = 1;
+                        
+                        if(arrArea[playerCoord[0], playerCoord[1]] == 0)
+                        {
+                            arrArea[playerCoord[0], playerCoord[1]] = 1;
+                            Sounds.DropSound();
+                        }
+                        else
+                        {
+                            Sounds.Error();
+                        }
                         break;
                     }
                 case ("Left"):
@@ -121,7 +141,8 @@ namespace Lesson2
         }
         public static void Error()
         {
-            Console.Beep(132, 150);
+            Console.Beep(587, 50);
+            Console.Beep(587, 150);
         }
     }
     public class KeyControls
@@ -147,7 +168,6 @@ namespace Lesson2
                     return "Down";
                 case ("Spacebar"):
                     Console.WriteLine("A key is: Spacebar      ");
-                    Sounds.DropSound();
                     return "Spacebar";
                 case ("Enter"):
                     Console.WriteLine("A key is: Enter         ");
