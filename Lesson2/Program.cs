@@ -8,20 +8,95 @@ namespace Lesson2
     {
         static void Main(string[] args)
         {
+        New_game:
+            //inicialise
+            int[] playerCoord = { 1, 1 };
+            int[,] arrArea = new int[3, 3] { { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0, 0 } };
             int counter = 0;
             Sounds.GameStartSound();
-        Start_game:
+        Start_game: 
 
             Console.SetCursorPosition(0, 0);
             Console.WriteLine($"\tKPeCTuKu - HOJIuKu by AnykeyStarwalker{Environment.NewLine}{Environment.NewLine}" +
                               $"yIIpaBJIeHue: BbI6op KJIetKu - cTpeJIKu, cdeJIaTb xod - IIpo6eJI, BBod - Ha4aTb 3aHoBo.{Environment.NewLine}");
 
-            GameArea.DrawArea();
-            //Console.WriteLine(counter);
-            KeyControls.KeyPress();
+            GameArea.DrawArea(arrArea, playerCoord);
             ++counter;
-                       
+            switch (KeyControls.KeyPress())
+            {
+                case ("New_game"):
+                {
+                goto New_game;
+                }
+                case ("Spacebar"):
+                    {
+                        arrArea[playerCoord[0], playerCoord[1]] = 1;
+                        break;
+                    }
+                case ("Left"):
+                    {
+                        if (playerCoord[1] > 0)
+                        {
+                            playerCoord[1] -= 1;
+                            Sounds.TickSound();
+                            break;
+                        }
+                        else
+                        {
+                            Sounds.Error();
+                            break;
+                        }
+
+                    }
+                case ("Right"):
+                    {
+                        if (playerCoord[1] < 2)
+                        {
+                            playerCoord[1] += 1;
+                            Sounds.TickSound();
+                            break;
+                        }
+                        else
+                        {
+                            Sounds.Error();
+                            break;
+                        }
+                    }
+                case ("Up"):
+                    {
+                        if (playerCoord[0] > 0)
+                        {
+                            playerCoord[0] -= 1;
+                            Sounds.TickSound();
+                            break;
+                        }
+                        else
+                        {
+                            Sounds.Error();
+                            break;
+                        }
+                    }
+                case ("Down"):
+                    {
+                        if (playerCoord[0] < 2)
+                        {
+                            playerCoord[0] += 1;
+                            Sounds.TickSound();
+                            break;
+                        }
+                        else
+                        {
+                            Sounds.Error();
+                            break;
+                        }
+                    }
+
+            }
             goto Start_game;
+            
+
+
+            
         }
     }
 
@@ -34,7 +109,8 @@ namespace Lesson2
         }
         public static void DropSound()
         {
-            Console.Beep(130, 100);
+            Console.Beep(261, 50);
+            Console.Beep(392, 100);
         }
         public static void GameStartSound()
         {
@@ -42,6 +118,10 @@ namespace Lesson2
             Console.Beep(587, 200);
             Console.Beep(659, 200);
             Console.Beep(698, 500);
+        }
+        public static void Error()
+        {
+            Console.Beep(132, 150);
         }
     }
     public class KeyControls
@@ -55,49 +135,36 @@ namespace Lesson2
             {
                 case ("LeftArrow"):
                     Console.WriteLine("A key is: LeftArrow     ");
-                    Sounds.TickSound();
-                    break;
+                    return "Left";
                 case ("RightArrow"):
                     Console.WriteLine("A key is: RightArrow    ");
-                    Sounds.TickSound();
-                    break;
+                    return "Right";
                 case ("UpArrow"):
                     Console.WriteLine("A key is: UpArrow       ");
-                    Sounds.TickSound();
-                    break;
+                    return "Up";
                 case ("DownArrow"):
                     Console.WriteLine("A key is: DownArrow     ");
-                    Sounds.TickSound();
-                    break;
+                    return "Down";
                 case ("Spacebar"):
                     Console.WriteLine("A key is: Spacebar      ");
                     Sounds.DropSound();
-                    break;
+                    return "Spacebar";
                 case ("Enter"):
                     Console.WriteLine("A key is: Enter         ");
                     Sounds.DropSound();
-                    break;
+                    return "New_game";
             }
             return key;
         }
     }
     public class GameArea
     {
-        public static string DrawArea()
+        public static string DrawArea(int[,] arrArea, int[] playerCoord)
         {
             string area = "";
-
-            string[,] drawArea = new string[5, 5] { 
-                {"+","-","-","-","+"},
-                {"|"," "," "," ","|"},
-                {"|"," "," "," ","|"},
-                {"|"," "," "," ","|"},
-                {"+","-","-","-","+"} 
-            };
-
             string s_1, s_2, s_3, s_4, s_5;
 
-            int[,] arrArea = new int[3, 3] { { 0, 1, 1 },{ 2, 0, 2 },{ 1, 2, 0 } };
+            
             for (int i = 0; i < arrArea.GetLength(0); i++)
             {
                 s_1 = "\t";
@@ -108,39 +175,50 @@ namespace Lesson2
 
                 for (int j = 0; j < arrArea.GetLength(1); j++)
                 {
-                    if(arrArea[i, j] == 0)
+                    if(arrArea[i, j] == 0 && playerCoord[0] == i && playerCoord[1] == j)
                     {
-                        Console.ForegroundColor = ConsoleColor.Green;
-                        drawArea[2, 2] = " ";
-                        s_1 += $"{drawArea[0, 0]}{drawArea[0, 1]}{drawArea[0, 2]}{drawArea[0, 3]}{drawArea[0, 4]}";
-                        s_2 += $"{drawArea[1, 0]}{drawArea[1, 1]}{drawArea[1, 2]}{drawArea[1, 3]}{drawArea[1, 4]}";
-                        s_3 += $"{drawArea[2, 0]}{drawArea[2, 1]}{drawArea[2, 2]}{drawArea[2, 3]}{drawArea[2, 4]}";
-                        s_4 += $"{drawArea[3, 0]}{drawArea[3, 1]}{drawArea[3, 2]}{drawArea[3, 3]}{drawArea[3, 4]}";
-                        s_5 += $"{drawArea[4, 0]}{drawArea[4, 1]}{drawArea[4, 2]}{drawArea[4, 3]}{drawArea[4, 4]}";
-                        Console.ResetColor();
+                        
+                        s_1 += "¤ ¤ ¤ ¤ ¤";
+                        s_2 += "¤       ¤";
+                        s_3 += "¤       ¤";
+                        s_4 += "¤       ¤";
+                        s_5 += "¤ ¤ ¤ ¤ ¤";
+                        
+                    }
+                    else if(arrArea[i, j] == 0)
+                    {
+                        s_1 += "· · · · ·";
+                        s_2 += "·       ·";
+                        s_3 += "·       ·";
+                        s_4 += "·       ·";
+                        s_5 += "· · · · ·";
+                    }
+                    else if (arrArea[i, j] == 1 && playerCoord[0] == i && playerCoord[1] == j)
+                    {
+                        s_1 += "¤ ¤ ¤ ¤ ¤";
+                        s_2 += "¤ x   x ¤";
+                        s_3 += "¤   x   ¤";
+                        s_4 += "¤ x   x ¤";
+                        s_5 += "¤ ¤ ¤ ¤ ¤";
                     }
                     else if(arrArea[i, j] == 1)
                     {
-                        Console.ResetColor();
-                        Console.ForegroundColor = ConsoleColor.Red;
-                        drawArea[2, 2] = "X";
-                        s_1 += $"{drawArea[0, 0]}{drawArea[0, 1]}{drawArea[0, 2]}{drawArea[0, 3]}{drawArea[0, 4]}";
-                        s_2 += $"{drawArea[1, 0]}{drawArea[1, 1]}{drawArea[1, 2]}{drawArea[1, 3]}{drawArea[1, 4]}";
-                        s_3 += $"{drawArea[2, 0]}{drawArea[2, 1]}{drawArea[2, 2]}{drawArea[2, 3]}{drawArea[2, 4]}";
-                        s_4 += $"{drawArea[3, 0]}{drawArea[3, 1]}{drawArea[3, 2]}{drawArea[3, 3]}{drawArea[3, 4]}";
-                        s_5 += $"{drawArea[4, 0]}{drawArea[4, 1]}{drawArea[4, 2]}{drawArea[4, 3]}{drawArea[4, 4]}";
+
+                        s_1 += "· · · · ·";
+                        s_2 += "· x   x ·";
+                        s_3 += "·   x   ·";
+                        s_4 += "· x   x ·";
+                        s_5 += "· · · · ·";
 
                     }
                     else if (arrArea[i, j] == 2)
                     {
-                        Console.ResetColor();
-                        Console.ForegroundColor = ConsoleColor.Blue;
-                        drawArea[2, 2] = "O";
-                        s_1 += $"{drawArea[0, 0]}{drawArea[0, 1]}{drawArea[0, 2]}{drawArea[0, 3]}{drawArea[0, 4]}";
-                        s_2 += $"{drawArea[1, 0]}{drawArea[1, 1]}{drawArea[1, 2]}{drawArea[1, 3]}{drawArea[1, 4]}";
-                        s_3 += $"{drawArea[2, 0]}{drawArea[2, 1]}{drawArea[2, 2]}{drawArea[2, 3]}{drawArea[2, 4]}";
-                        s_4 += $"{drawArea[3, 0]}{drawArea[3, 1]}{drawArea[3, 2]}{drawArea[3, 3]}{drawArea[3, 4]}";
-                        s_5 += $"{drawArea[4, 0]}{drawArea[4, 1]}{drawArea[4, 2]}{drawArea[4, 3]}{drawArea[4, 4]}";
+
+                        s_1 += "· · · · ·";
+                        s_2 += "·  o0o ·";
+                        s_3 += "· 0   0 ·";
+                        s_4 += "·  o0o  ·";
+                        s_5 += "· · · · ·";
 
                     }
 
@@ -158,6 +236,13 @@ namespace Lesson2
 
 
             return area;
+        }
+    }
+    public class Player_1
+    {
+        public static int PlayerCoord(int x = 1, int y = 1)
+        {
+            return x;
         }
     }
 }
