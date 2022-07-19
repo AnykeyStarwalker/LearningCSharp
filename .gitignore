@@ -1,0 +1,7 @@
+*.config
+*.pdb
+/Properties
+/obj
+/.vs
+/bin
+*.exe
