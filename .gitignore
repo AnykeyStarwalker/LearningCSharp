@@ -6,3 +6,10 @@
 /bin
 *.exe
 /AcademyCifra
+/AcademyCifra.sln.orig
+/Lesson4/Lesson4.csproj.orig
+/Lesson4/Lesson4_BACKUP_964.csproj
+/Lesson4/Lesson4_BASE_964.csproj
+/Lesson4/Lesson4_LOCAL_964.csproj
+/Lesson4/Lesson4_REMOTE_964.csproj
+/Lesson4/Program.cs.orig
