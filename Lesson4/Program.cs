@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using System.Xml;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,8 +13,9 @@ namespace Lesson4
     class Program
     {
         static void Main(string[] args)
-        {            
+        {
             PhoneBook PB = new PhoneBook();
+            Abonent newAbon = new Abonent();
             string key;
             do
             {
@@ -21,13 +24,14 @@ namespace Lesson4
                 if (key == "1")
                 {
                     PB.helpInfo = $"|             1 - Добавить абонента. 2 - Поиск. 3 - Сделать звонок.             |{Environment.NewLine}" +
-                                  $"| Введите телефонный номер, затем ФИО абонента или название организации.        |{Environment.NewLine}" +
+                                  $"| Введите телефонный номер, затем имя абонента или название организации.        |{Environment.NewLine}" +
                                   $"| Пример: 8(123)456-78-90 Пупкин Иван Петрович; 112 Спасатели.                  |";
                 }
                 if (key == "2")
                 {
                     PB.helpInfo = $"|             1 - Добавить абонента. 2 - Поиск. 3 - Сделать звонок.             |{Environment.NewLine}" +
                                   $"| Начните вводить имя абонента или номер телефона...                            |";
+                    newAbon.Read();
                 }
                 if (key == "3")
                 {
@@ -45,6 +49,7 @@ namespace Lesson4
 
     class PhoneBook
     {
+
         const string bookName    = "Т Е Л Е Ф О Н Н Ы Й   С П Р А В О Ч Н И К";
         const string horzBorder  = "¤ - - - - - - - - - ¤ - - - - - - - - - ¤ - - - - - - - - - ¤ - - - - - - - - - ¤";
         public string helpInfo   = "|             1 - Добавить абонента. 2 - Поиск. 3 - Сделать звонок.             |";
@@ -66,12 +71,53 @@ namespace Lesson4
                 );
 
         }
-        public void AddAbonent(int newPhone, string newName, string newSurname = null, string newSecondname = null)
+
+    }
+
+    class Abonent
+    {
+
+        public int phoneNumber { get; set; }
+        public string name { get; set; }
+        public void Create(int newPhone, string newName)
         {
-            string name;
-            string surname;
-            string secondname;
-            int phoneNumber;
+            this.phoneNumber = newPhone;
+            this.name = newName;
+            //записать в документ
         }
+        public void Read()
+        {
+            //Console.WriteLine($"{(this.phoneNumber).ToString()} {this.name}");
+            XmlDocument subList = new XmlDocument();
+            subList.Load($"{Path.GetFullPath(Directory.GetCurrentDirectory() + "\\..\\..\\")}subscribers.xml");
+            XmlElement xRoot = subList.DocumentElement;
+            if (xRoot != null)
+            {
+                foreach (XmlElement xnode in xRoot)
+                {
+                    XmlNode attr = xnode.Attributes.GetNamedItem("name");
+                    Console.Write($"Имя: {attr.Value} ");
+
+                    foreach (XmlNode childnode in xnode.ChildNodes)
+                    {
+                        if (childnode.Name == "number")
+                        {
+                            Console.Write($"Номер: {childnode.InnerText}{Environment.NewLine}");
+                        }
+                    }
+                }
+            }
+
+            var abonentsList = new Dictionary<int, string>();
+        }
+        public void Update()
+        {
+            Console.WriteLine($"{(this.phoneNumber).ToString()} {this.name}");
+        }
+        public void Delete()
+        {
+            Console.WriteLine($"{(this.phoneNumber).ToString()} {this.name}");
+        }
+
     }
 }
