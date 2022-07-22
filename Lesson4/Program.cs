@@ -17,9 +17,11 @@ namespace Lesson4
             PhoneBook PB = new PhoneBook();
             Abonent newAbon = new Abonent();
             string key;
+            List<Subscriber> subscribers = new List<Subscriber>();
             do
             {
                 PB.UI_DrawHat();
+                var rand = new Random();
                 key = Console.ReadKey(true).KeyChar.ToString();
                 if (key == "1")
                 {
@@ -32,11 +34,28 @@ namespace Lesson4
                     PB.helpInfo = $"|             1 - Добавить абонента. 2 - Поиск. 3 - Сделать звонок.             |{Environment.NewLine}" +
                                   $"| Начните вводить имя абонента или номер телефона...                            |";
                     newAbon.Read();
+                    Subscriber sub = new Subscriber("Iiiiigor", "123456789");
+                    Console.WriteLine(sub.Name);
+                    Console.WriteLine(sub.PhoneNumber);
                 }
                 if (key == "3")
                 {
                     PB.helpInfo = $"|             1 - Добавить абонента. 2 - Поиск. 3 - Сделать звонок.             |{Environment.NewLine}" +
                                   $"| Набираем случайный номер... Упс! Похоже на АТС замкнул коммутационный шкаф... |";
+                
+                    for(int i = 0; i < 100; i++)
+                    {
+                        
+                        string randNum = rand.Next(000000000, 999999999).ToString();
+                        subscribers.Add(new Subscriber("TeleBot", randNum));
+                    }
+                    Console.SetCursorPosition(0, 20);
+                    Console.WriteLine();
+                    Console.WriteLine(subscribers.Count);
+                    foreach(Subscriber subscriber in subscribers)
+                    {
+                        Console.WriteLine($"{subscriber.Name} {subscriber.PhoneNumber}");
+                    }
                 }
             }
             while (key != "Escape");
