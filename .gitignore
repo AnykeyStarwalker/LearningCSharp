@@ -5,6 +5,7 @@
 /.vs
 /bin
 *.exe
+*.orig
 /AcademyCifra
 /AcademyCifra.sln.orig
 /Lesson4/Lesson4.csproj.orig
