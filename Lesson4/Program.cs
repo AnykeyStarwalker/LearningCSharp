@@ -87,7 +87,7 @@ namespace Lesson4
         }
         public void Read()
         {
-            //Console.WriteLine($"{(this.phoneNumber).ToString()} {this.name}");
+            var subscribersList = new Dictionary<string, string>();
             XmlDocument subList = new XmlDocument();
             subList.Load($"{Path.GetFullPath(Directory.GetCurrentDirectory() + "\\..\\..\\")}subscribers.xml");
             XmlElement xRoot = subList.DocumentElement;
@@ -95,20 +95,24 @@ namespace Lesson4
             {
                 foreach (XmlElement xnode in xRoot)
                 {
+                    string name = "";
+                    string number = "";
                     XmlNode attr = xnode.Attributes.GetNamedItem("name");
-                    Console.Write($"Имя: {attr.Value} ");
+                    name = attr.Value;
 
                     foreach (XmlNode childnode in xnode.ChildNodes)
                     {
-                        if (childnode.Name == "number")
-                        {
-                            Console.Write($"Номер: {childnode.InnerText}{Environment.NewLine}");
-                        }
+                        if (childnode.Name == "number"){ number = childnode.InnerText; }
                     }
+
+                    subscribersList.Add(name, number);
                 }
             }
+            foreach (var person in subscribersList)
+            {
+                Console.WriteLine($"key: {person.Key}  value: {person.Value}");
+            }
 
-            var abonentsList = new Dictionary<int, string>();
         }
         public void Update()
         {
