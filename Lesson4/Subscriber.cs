@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,25 +9,23 @@ namespace Lesson4
 {
     internal class Subscriber
     {
-        /// <summary>
-        /// Имя абонента
-        /// </summary>
-        private string name;
-        public string Name { get { return name; } }
-        /// <summary>
-        /// Номер абонента
-        /// </summary>
+
         private string phoneNumber;
-        public string PhoneNumber 
-        { 
-            get { return phoneNumber; }  
+        private string name;
+        public string PhoneNumber
+        {
+            get { return phoneNumber; }
             set { this.phoneNumber = value; }
         }
-
-        public Subscriber(string name, string phoneNumber)
+        public string Name 
+        { 
+            get { return name; } 
+        }
+        public Subscriber(string name = null, string phoneNumber = null)
         {
             this.name = name;
             this.phoneNumber = phoneNumber;
-        }   
+        }
+
     }
 }
