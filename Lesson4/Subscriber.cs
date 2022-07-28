@@ -1,28 +1,28 @@
-﻿using System;
-using System.IO;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Lesson4
+﻿namespace Lesson4
 {
     internal class Subscriber
     {
-
+        private string id;
         private string phoneNumber;
         private string name;
+        public string ID
+        {
+            get => this.id;
+            set => this.id = value;
+        }
         public string PhoneNumber
         {
-            get { return phoneNumber; }
-            set { this.phoneNumber = value; }
+            get => this.phoneNumber;
+            set => this.phoneNumber = value;
         }
-        public string Name 
-        { 
-            get { return name; } 
-        }
-        public Subscriber(string name = null, string phoneNumber = null)
+        public string Name
         {
+            get => name; 
+            set => this.name = value;
+        }
+        public Subscriber(string id, string name, string phoneNumber)
+        {
+            this.id = id;
             this.name = name;
             this.phoneNumber = phoneNumber;
         }

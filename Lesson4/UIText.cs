@@ -11,13 +11,13 @@ namespace Lesson4
         private string menuInfo = 
             $"┌                                                                                   ┐{Environment.NewLine}" +
             $"│                              ТЕЛЕФОННЫЙ СПРАВОЧНИК                                │{Environment.NewLine}" +
-            $"│ 1 - Добавить. 2 - Прочитать всё. 3 - Сменить владельца номера. 4 - Удалить.       │{Environment.NewLine}" +
+            $"│                                                                                   │{Environment.NewLine}" +
+            $"│         1 - Добавить. 2 - Список. 3 - Редактировать запись. 4 - Удалить.          │{Environment.NewLine}" +
             $"└                                                                                   ┘{Environment.NewLine}";
         private string read =
             $"\tФайл существует. Вывести содержимое.        {Environment.NewLine}" +
             $"\tЕсли файла нет, создать.                    {Environment.NewLine}";
         private string add =
-            $"\tПроверить наличие файла. Если нет - создать.{Environment.NewLine}" +
             $"\tПредложить ввести номер.                    {Environment.NewLine}" +
             $"\tПредложить ввести имя.                      {Environment.NewLine}" +
             $"\tЗаписать данные в конец файла.              {Environment.NewLine}";
@@ -33,25 +33,10 @@ namespace Lesson4
             $"\tПредложить ввести имя.                      {Environment.NewLine}" +
             $"\tИскать сходство в файле.                    {Environment.NewLine}" +
             $"\tЕсли сходство найдено, то удалить запись.   {Environment.NewLine}";
-        public string MenuInfo
-        {
-            get { return menuInfo; }
-        }
-        public string Read
-        {
-            get { return read; }
-        }
-        public string Add
-        {
-            get { return add; }
-        }
-        public string Change
-        {
-            get { return change; }
-        }
-        public string Delete
-        {
-            get { return delete; }
-        }
+        public string MenuInfo => menuInfo;
+        public string Read => read;
+        public string Add => add;
+        public string Change => change;
+        public string Delete => delete;
     }
 }
