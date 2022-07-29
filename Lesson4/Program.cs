@@ -12,6 +12,9 @@ namespace Lesson4
 {
     class Program
     {
+        /// <summary>
+        /// Создает экземпляр класса PhoneBook и запускает цикл
+        /// </summary>
         static void Main(string[] args)
         {
             PhoneBook phoneBook = new PhoneBook();

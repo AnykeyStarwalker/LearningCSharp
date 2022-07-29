@@ -5,9 +5,20 @@ using System.Xml;
 
 namespace Lesson4
 {
+    /// <summary>
+    /// Класс программы "Телефонный справочник"
+    /// Содержит главный цикл, метод отрисовки данных в консоли,
+    /// реализацию принципа CRUD, метод добавления элемента в XML файл.
+    /// </summary>
     class PhoneBook
     {
+        /// <summary>
+        /// Публичный экземпляр метода работы с файлами для файла справочника.
+        /// </summary>
         public FileInfo bookFile = new FileInfo(Path.GetFullPath(Directory.GetCurrentDirectory()) + "\\subscribers.xml");
+        /// <summary>
+        /// Основной цикл программы
+        /// </summary>
         public void mainLoop()
         {
             string key;
@@ -41,12 +52,17 @@ namespace Lesson4
             while (key != "Escape");
             mainLoop();
         }
+        /// <summary>
+        /// Функция отрисовки в консоли. Принимает строки и список.
+        /// </summary>
+        /// <param name="helpInfo">Шапка с хелпом</param>
+        /// <param name="textInfo">Дополнительная информация</param>
+        /// <param name="subList">Список абонентов</param>
         public void UI_Draw(string helpInfo, string textInfo = null, IEnumerable<Subscriber> subList = null)
         {
             Console.Clear();
             Console.SetCursorPosition(0, 0);
             Console.Write(helpInfo);
-            //Console.WriteLine("┌                                                                                   ┐");
 
             if (subList != null)
             {
@@ -58,8 +74,15 @@ namespace Lesson4
                     }
                 }
             }
-            //Console.WriteLine($"└                                                                                   ┘{Environment.NewLine}");
+            else
+            {
+                Console.WriteLine(textInfo);
+            }
         }
+        /// <summary>
+        /// Читает XML файл и формирует из его нодов список на основе класса Subscriber
+        /// </summary>
+        /// <returns>Возвращает объект сформированного списка</returns>
         public IEnumerable<Subscriber> ReadFile()
         {            
             if (!bookFile.Exists)
@@ -95,6 +118,9 @@ namespace Lesson4
                 return subscribers;
             }
         }
+        /// <summary>
+        /// Добавляет XML ноду в файл на основе введенных данных пользователем 
+        /// </summary>
         public void AddSubscriber()
         {
             string id;
@@ -112,6 +138,9 @@ namespace Lesson4
             CreateXMLElement(id, name, phoneNumber);
             Console.WriteLine($"Абонент {name} успешно добавлен в телефонную книгу"); 
         }
+        /// <summary>
+        /// Ищет пользователя в XML файле по введенному айди, затем перезаписывает имя и номер
+        /// </summary>
         private void ChangeNumberOwner()
         {
             bool n = false;
@@ -153,6 +182,10 @@ namespace Lesson4
                 Console.WriteLine("Запись по данному Id не найдена.");
             }
         }
+        /// <summary>
+        /// Ищет пользователя в XML файле по введенному айди, затем обнуляет имя и номер
+        /// ID при этом не удаляется и остается уникальным у каждого пользователя
+        /// </summary>
         public void DeleteRecord()
         {
             string id;
@@ -186,6 +219,12 @@ namespace Lesson4
                 Console.WriteLine("Запись по данному Id не найдена."); 
             }
         }
+        /// <summary>
+        /// Формирует ноду для записи в XML из входящих аргументов
+        /// </summary>
+        /// <param name="id">ID</param>
+        /// <param name="name">Имя</param>
+        /// <param name="phoneNumber">Номе</param>
         public void CreateXMLElement(string id, string name, string phoneNumber)
         {
             XmlDocument subList = new XmlDocument();

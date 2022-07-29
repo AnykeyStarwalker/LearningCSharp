@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace Lesson4
 {
+    /// <summary>
+    /// Класс для вывода регулярных строковых выражений
+    /// Создан для удобства и компактности кода
+    /// </summary>
     internal class UIText
     {
         private string menuInfo = 

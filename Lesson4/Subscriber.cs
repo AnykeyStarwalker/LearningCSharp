@@ -1,5 +1,8 @@
 ﻿namespace Lesson4
 {
+    /// <summary>
+    /// Класс с тремя аргументами и конструктором
+    /// </summary>
     internal class Subscriber
     {
         private string id;
