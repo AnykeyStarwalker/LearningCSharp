@@ -1,0 +1,8 @@
+C:\Users\Eugene\Documents\C#\LearningCSharp\Lesson8\bin\Debug\Lesson8.exe.config
+C:\Users\Eugene\Documents\C#\LearningCSharp\Lesson8\bin\Debug\Lesson8.exe
+C:\Users\Eugene\Documents\C#\LearningCSharp\Lesson8\bin\Debug\Lesson8.pdb
+C:\Users\Eugene\Documents\C#\LearningCSharp\Lesson8\obj\Debug\Lesson8.csproj.AssemblyReference.cache
+C:\Users\Eugene\Documents\C#\LearningCSharp\Lesson8\obj\Debug\Lesson8.csproj.SuggestedBindingRedirects.cache
+C:\Users\Eugene\Documents\C#\LearningCSharp\Lesson8\obj\Debug\Lesson8.csproj.CoreCompileInputs.cache
+C:\Users\Eugene\Documents\C#\LearningCSharp\Lesson8\obj\Debug\Lesson8.exe
+C:\Users\Eugene\Documents\C#\LearningCSharp\Lesson8\obj\Debug\Lesson8.pdb
