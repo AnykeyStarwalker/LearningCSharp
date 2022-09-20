@@ -1,0 +1,8 @@
+C:\Users\xgolen\Documents\C#\LearningCSharp\Lesson11_tamagoshi\bin\Debug\Lesson11_tamagoshi.exe.config
+C:\Users\xgolen\Documents\C#\LearningCSharp\Lesson11_tamagoshi\bin\Debug\Lesson11_tamagoshi.exe
+C:\Users\xgolen\Documents\C#\LearningCSharp\Lesson11_tamagoshi\bin\Debug\Lesson11_tamagoshi.pdb
+C:\Users\xgolen\Documents\C#\LearningCSharp\Lesson11_tamagoshi\obj\Debug\Lesson11_tamagoshi.csproj.AssemblyReference.cache
+C:\Users\xgolen\Documents\C#\LearningCSharp\Lesson11_tamagoshi\obj\Debug\Lesson11_tamagoshi.csproj.SuggestedBindingRedirects.cache
+C:\Users\xgolen\Documents\C#\LearningCSharp\Lesson11_tamagoshi\obj\Debug\Lesson11_tamagoshi.csproj.CoreCompileInputs.cache
+C:\Users\xgolen\Documents\C#\LearningCSharp\Lesson11_tamagoshi\obj\Debug\Lesson11_tamagoshi.exe
+C:\Users\xgolen\Documents\C#\LearningCSharp\Lesson11_tamagoshi\obj\Debug\Lesson11_tamagoshi.pdb
