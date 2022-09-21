@@ -1,0 +1,12 @@
+C:\Users\xgolen\Documents\C#\LearningCSharp\Lesson11_winform\bin\Debug\Lesson11_winform.exe.config
+C:\Users\xgolen\Documents\C#\LearningCSharp\Lesson11_winform\bin\Debug\Lesson11_winform.exe
+C:\Users\xgolen\Documents\C#\LearningCSharp\Lesson11_winform\bin\Debug\Lesson11_winform.pdb
+C:\Users\xgolen\Documents\C#\LearningCSharp\Lesson11_winform\obj\Debug\Lesson11_winform.csproj.AssemblyReference.cache
+C:\Users\xgolen\Documents\C#\LearningCSharp\Lesson11_winform\obj\Debug\Lesson11_winform.csproj.SuggestedBindingRedirects.cache
+C:\Users\xgolen\Documents\C#\LearningCSharp\Lesson11_winform\obj\Debug\Lesson11_winform.Form1.resources
+C:\Users\xgolen\Documents\C#\LearningCSharp\Lesson11_winform\obj\Debug\Lesson11_winform.Properties.Resources.resources
+C:\Users\xgolen\Documents\C#\LearningCSharp\Lesson11_winform\obj\Debug\Lesson11_winform.Resource1.resources
+C:\Users\xgolen\Documents\C#\LearningCSharp\Lesson11_winform\obj\Debug\Lesson11_winform.csproj.GenerateResource.cache
+C:\Users\xgolen\Documents\C#\LearningCSharp\Lesson11_winform\obj\Debug\Lesson11_winform.csproj.CoreCompileInputs.cache
+C:\Users\xgolen\Documents\C#\LearningCSharp\Lesson11_winform\obj\Debug\Lesson11_winform.exe
+C:\Users\xgolen\Documents\C#\LearningCSharp\Lesson11_winform\obj\Debug\Lesson11_winform.pdb
