@@ -6,31 +6,38 @@ using Telegram.Bot.Polling;
 using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
 using Telegram.Bot.Types.ReplyMarkups;
+using Telegrambot;
 
 
-//950 165-51-81
 internal class Program
 {
+    //путь в корень общего хранилища файлов
     public static string filestorage = "C:\\Users\\xgolen\\Documents\\C#\\BlazorApps\\Biblioheap\\BlazorApps\\Files\\";
+
     private static void Main(string[] args)
     {
+
         using var cts = new CancellationTokenSource();
 
-        var client = new TelegramBotClient("5789379747:AAGtUho2m0hklh0f05Ri1KJrES9HMxif_NE");
+        //токен из телеграм бота
+        var client = new TelegramBotClient("5794828755:AAEyCAk1gEPgbaXDOEjp8uT6fHrRNl5MDBc");
 
+        //запуск бота. вся магия происходит в функции Update
         client.StartReceiving(Update, Error);
 
         Console.ReadLine();
+
     }
 
 
-
+    //срабатывает при получении сообщения
     async static Task Update(ITelegramBotClient botClient, Update update, CancellationToken client)
     {
-
-        var message = update.Message;
+        LordOfMessage lordOfMessage = new LordOfMessage(botClient, update, client);
+        lordOfMessage.IncomeMessage(botClient, update, client);
+    }
 #nullable disable
-        if(message.Text != null)
+        /*if(message.Text != null)
         {
             if (message.Text.ToLower().Contains("ку"))
             {
@@ -136,7 +143,7 @@ internal class Program
             await botClient.SendTextMessageAsync(message.Chat.Id, response);
             return;
         }
-    }
+    }*/
     private static Task Error(ITelegramBotClient arg1, Exception arg2, CancellationToken arg3)
     {
         throw new NotImplementedException();
