@@ -1,0 +1,120 @@
+2022-10-27 20:52:07.2884 INFO TextMessage: @anykeykin (1967997790) 27.10.2022 20:52:07
+2022-10-27 20:52:07.2923 DEBUG TextMessage: @anykeykin (1967997790) 27.10.2022 20:52:07
+2022-10-27 21:49:39.2911 INFO TextMessage: @anykeykin (1967997790)
+2022-10-27 21:49:40.0786 INFO DB Update request from @anykeykin (1967997790)
+2022-10-27 21:49:40.0786 INFO DB Update request from @anykeykin (1967997790)
+2022-10-27 21:51:34.6024 INFO TextMessage: @anykeykin (1967997790)
+2022-10-27 21:51:35.0109 INFO Search by: book_name
+2022-10-27 21:51:35.4723 INFO DB Update request from @anykeykin (1967997790)
+2022-10-27 21:51:35.4723 INFO DB Update request from @anykeykin (1967997790)
+2022-10-27 21:51:43.1879 INFO TextMessage: @anykeykin (1967997790)
+2022-10-27 21:51:43.1879 INFO Search by: book_name
+2022-10-27 21:51:43.2471 INFO @anykeykin (1967997790) searching by book name.
+2022-10-27 21:51:43.3433 INFO DB Select request from @anykeykin (1967997790)
+2022-10-27 21:51:47.6766 INFO TextMessage: @anykeykin (1967997790)
+2022-10-27 21:51:47.6766 INFO Search by: book_name
+2022-10-27 21:51:47.6766 INFO @anykeykin (1967997790) searching by book name.
+2022-10-27 21:51:47.7803 INFO DB Select request from @anykeykin (1967997790)
+2022-10-27 21:51:57.3068 INFO TextMessage: @anykeykin (1967997790)
+2022-10-27 21:51:57.3068 INFO Search by: book_name
+2022-10-27 21:51:57.3068 INFO DB Update request from @anykeykin (1967997790)
+2022-10-27 21:52:02.7693 INFO TextMessage: @anykeykin (1967997790)
+2022-10-27 21:52:02.7693 INFO Search by: book_name
+2022-10-27 21:52:08.0720 INFO TextMessage: @anykeykin (1967997790)
+2022-10-27 21:52:08.0720 INFO Search by: book_name
+2022-10-27 21:52:08.3102 INFO DB Update request from @anykeykin (1967997790)
+2022-10-27 21:52:08.3102 INFO DB Update request from @anykeykin (1967997790)
+2022-10-27 22:36:36.5240 INFO TextMessage: @anykeykin (1967997790)
+2022-10-27 22:36:36.9451 INFO Search by: book_name
+2022-10-27 22:36:36.9817 INFO DB Update request from @anykeykin (1967997790)
+2022-10-27 22:36:38.2593 INFO TextMessage: @anykeykin (1967997790)
+2022-10-27 22:36:38.2593 INFO Search by: book_name
+2022-10-27 22:43:00.1793 INFO TextMessage: @anykeykin (1967997790)
+2022-10-27 22:43:00.6449 INFO Search by: book_name
+2022-10-27 22:43:01.0807 INFO DB Update request from @anykeykin (1967997790)
+2022-10-27 22:43:01.0807 INFO DB Update request from @anykeykin (1967997790)
+2022-10-27 22:43:06.5649 INFO TextMessage: @anykeykin (1967997790)
+2022-10-27 22:43:06.5649 INFO Search by: book_name
+2022-10-27 22:43:06.5711 INFO DB Update request from @anykeykin (1967997790)
+2022-10-27 22:43:10.7499 INFO TextMessage: @anykeykin (1967997790)
+2022-10-27 22:43:10.7499 INFO Search by: book_name
+2022-10-27 22:43:10.8928 INFO Send Алгоритмизация_и_основы_программирования.pdf reference to @anykeykin (1967997790)
+2022-10-27 22:43:24.2262 INFO TextMessage: @anykeykin (1967997790)
+2022-10-27 22:43:24.2262 INFO Search by: book_name
+2022-10-27 22:43:24.3775 INFO DB Update request from @anykeykin (1967997790)
+2022-10-27 22:43:24.3775 INFO DB Update request from @anykeykin (1967997790)
+2022-10-27 22:43:27.2835 INFO TextMessage: @anykeykin (1967997790)
+2022-10-27 22:43:27.2835 INFO Search by: book_name
+2022-10-27 22:43:27.3919 INFO DB Update request from @anykeykin (1967997790)
+2022-10-27 22:43:29.8502 INFO TextMessage: @anykeykin (1967997790)
+2022-10-27 22:43:29.8502 INFO Search by: genre
+2022-10-27 22:43:29.9097 INFO @anykeykin (1967997790) searching by genre.
+2022-10-27 22:43:30.0037 INFO DB Select request from @anykeykin (1967997790)
+2022-10-27 22:43:32.7448 INFO TextMessage: @anykeykin (1967997790)
+2022-10-27 22:43:32.7448 INFO Search by: genre
+2022-10-27 22:43:32.7448 INFO @anykeykin (1967997790) searching by genre.
+2022-10-27 22:43:32.8682 INFO DB Select request from @anykeykin (1967997790)
+2022-10-27 22:43:38.2489 INFO TextMessage: @anykeykin (1967997790)
+2022-10-27 22:43:38.2489 INFO Search by: genre
+2022-10-27 22:43:38.3498 INFO DB Update request from @anykeykin (1967997790)
+2022-10-27 22:43:40.8508 INFO TextMessage: @anykeykin (1967997790)
+2022-10-27 22:43:40.8508 INFO Search by: author
+2022-10-27 22:43:40.8540 INFO @anykeykin (1967997790) searching by author.
+2022-10-27 22:43:40.9573 INFO DB Select request from @anykeykin (1967997790)
+2022-10-27 22:43:48.6940 INFO TextMessage: @anykeykin (1967997790)
+2022-10-27 22:43:48.6940 INFO Search by: author
+2022-10-27 22:43:48.8139 INFO DB Update request from @anykeykin (1967997790)
+2022-10-27 22:43:48.8139 INFO DB Update request from @anykeykin (1967997790)
+2022-10-27 22:45:05.5408 INFO TextMessage: @anykeykin (1967997790)
+2022-10-27 22:45:05.9511 INFO Search by: book_name
+2022-10-27 22:45:06.3441 INFO DB Update request from @anykeykin (1967997790)
+2022-10-27 22:45:06.3441 INFO DB Update request from @anykeykin (1967997790)
+2022-10-27 22:45:11.4870 INFO TextMessage: @anykeykin (1967997790)
+2022-10-27 22:45:11.4870 INFO Search by: book_name
+2022-10-27 22:45:11.4994 INFO DB Update request from @anykeykin (1967997790)
+2022-10-27 22:45:14.9759 INFO TextMessage: @anykeykin (1967997790)
+2022-10-27 22:45:14.9759 INFO Search by: book_name
+2022-10-27 22:45:15.0871 INFO Send C# 9.0. Карманный справочник.pdf reference to @anykeykin (1967997790)
+2022-10-27 23:04:57.3995 INFO TextMessage: @anykeykin (1967997790)
+2022-10-27 23:04:57.8016 INFO Search by: book_name
+2022-10-27 23:04:58.1789 INFO DB Update request from @anykeykin (1967997790)
+2022-10-27 23:04:58.1789 INFO DB Update request from @anykeykin (1967997790)
+2022-10-27 23:05:09.3912 INFO TextMessage: @anykeykin (1967997790)
+2022-10-27 23:05:09.3912 INFO Search by: book_name
+2022-10-27 23:05:09.3912 INFO DB Update request from @anykeykin (1967997790)
+2022-10-27 23:05:19.7061 INFO TextMessage: @anykeykin (1967997790)
+2022-10-27 23:05:19.7061 INFO Search by: book_name
+2022-10-27 23:05:19.8867 INFO DB Update request from @anykeykin (1967997790)
+2022-10-27 23:05:31.0050 INFO TextMessage: @anykeykin (1967997790)
+2022-10-27 23:05:31.0050 INFO Search by: book_name
+2022-10-27 23:05:31.1195 INFO DB Update request from @anykeykin (1967997790)
+2022-10-27 23:05:39.7878 INFO TextMessage: @anykeykin (1967997790)
+2022-10-27 23:05:39.7878 INFO Search by: book_name
+2022-10-27 23:05:39.7912 INFO DB Update request from @anykeykin (1967997790)
+2022-10-27 23:05:42.0358 INFO TextMessage: @anykeykin (1967997790)
+2022-10-27 23:05:42.0358 INFO Search by: book_name
+2022-10-27 23:05:42.0358 INFO DB Update request from @anykeykin (1967997790)
+2022-10-27 23:05:52.9593 INFO TextMessage: @anykeykin (1967997790)
+2022-10-27 23:05:52.9593 INFO Search by: book_name
+2022-10-27 23:05:53.1286 INFO DB Update request from @anykeykin (1967997790)
+2022-10-27 23:05:58.9975 INFO TextMessage: @anykeykin (1967997790)
+2022-10-27 23:05:58.9975 INFO Search by: book_name
+2022-10-27 23:05:59.1482 INFO DB Update request from @anykeykin (1967997790)
+2022-10-27 23:06:03.0969 INFO TextMessage: @anykeykin (1967997790)
+2022-10-27 23:06:03.0969 INFO Search by: author
+2022-10-27 23:06:03.1531 INFO @anykeykin (1967997790) searching by author.
+2022-10-27 23:06:03.2956 INFO DB Select request from @anykeykin (1967997790)
+2022-10-27 23:06:12.8751 INFO TextMessage: @anykeykin (1967997790)
+2022-10-27 23:06:12.8751 INFO Search by: author
+2022-10-27 23:06:12.8751 INFO @anykeykin (1967997790) searching by author.
+2022-10-27 23:06:12.9757 INFO DB Select request from @anykeykin (1967997790)
+2022-10-27 23:06:27.2364 INFO TextMessage: @anykeykin (1967997790)
+2022-10-27 23:06:27.2364 INFO Search by: author
+2022-10-27 23:06:27.2364 INFO DB Update request from @anykeykin (1967997790)
+2022-10-27 23:06:31.5158 INFO TextMessage: @anykeykin (1967997790)
+2022-10-27 23:06:31.5158 INFO Search by: author
+2022-10-27 23:06:31.6153 INFO Send Biblioheap.pdf reference to @anykeykin (1967997790)
+2022-10-27 23:06:56.9160 INFO TextMessage: @anykeykin (1967997790)
+2022-10-27 23:06:56.9160 INFO Search by: author
+2022-10-27 23:06:57.0154 INFO DB Update request from @anykeykin (1967997790)
+2022-10-27 23:06:57.0154 INFO DB Update request from @anykeykin (1967997790)

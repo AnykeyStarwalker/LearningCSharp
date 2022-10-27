@@ -16,3 +16,6 @@ C:\#C\telegrambot\Telegrambot_console\Telegrambot\obj\Debug\net6.0\ref\Telegramb
 C:\#C\telegrambot\Telegrambot_console\Telegrambot\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\#C\telegrambot\Telegrambot_console\Telegrambot\bin\Debug\net6.0\Telegram.Bot.dll
 C:\#C\telegrambot\Telegrambot_console\Telegrambot\obj\Debug\net6.0\Telegrambot.csproj.CopyComplete
+C:\#C\telegrambot\Telegrambot_console\Telegrambot\bin\Debug\net6.0\Npgsql.dll
+C:\#C\telegrambot\Telegrambot_console\Telegrambot\bin\Debug\net6.0\NLog.dll
+C:\#C\telegrambot\Telegrambot_console\Telegrambot\bin\Debug\net6.0\NLog.config
